@@ -8,16 +8,18 @@ function Header() {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <div>
+        <Link href="/" className={classes.logo}>
+          Aripov.js
+        </Link>
+      </div>
       <nav>
         <ul>
           <li>
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about" activeClassName="active">
-              About
-            </Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
             <Link href="/Blogs">Blogs</Link>

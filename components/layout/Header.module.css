@@ -10,9 +10,10 @@
 }
 
 .logo {
-  font-size: 2rem;
-  color: white;
+  color: #515ffd;
   font-weight: bold;
+  cursor: pointer;
+  user-select: none;
 }
 
 .header ul {
@@ -30,14 +31,11 @@
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #4353ff;
+  color: #515ffd;
 }
 
 .header a:hover,
+.header a:active,
 .header a.active {
-  color: red;
-}
-
-.active {
-  color: red;
+  color: #3142ff;
 }
