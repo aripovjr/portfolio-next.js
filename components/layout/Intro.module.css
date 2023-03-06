@@ -18,6 +18,7 @@
 }
 
 .avatar {
+  position: relative;
   object-fit: cover;
   width: 300px;
   border-radius: 50%;
@@ -37,4 +38,15 @@
 }
 .avatar:hover {
   padding: 0;
+}
+
+.round::after {
+  margin-top: 10px;
+  content: "Location📍:  Łódź, Poland";
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  justify-content: center;
+  color: #b5b5b5;
+  font-style: italic;
 }

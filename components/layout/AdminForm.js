@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import classes from "./Admin.module.css";
-import Wrapper from "./../layout/Wrapper";
 import WrapperContainer from "./../layout/Wrapper";
 
 function AdminForm() {

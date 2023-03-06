@@ -1,0 +1,40 @@
+.mediaContainer {
+  margin-left: 3.5rem;
+}
+
+.mediaLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.mediaLinks i {
+  color: #4d8cff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 40px;
+}
+.mediaLinks i:hover::before {
+  content: "Github";
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.buttonContainer {
+  margin-top: 1rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonContainer button {
+  transition: 0.8s;
+  cursor: pointer;
+  font-size: 20px;
+  color: #515ffd;
+  border: 2px solid #515ffd;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+.buttonContainer button:hover {
+  background-color: #515ffd;
+  color: #fff;
+}

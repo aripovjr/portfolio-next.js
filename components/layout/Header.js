@@ -24,6 +24,9 @@ function Header() {
           <li>
             <Link href="/Blogs">Blogs</Link>
           </li>
+          <li>
+            <Link href="/Blogs">Contact</Link>
+          </li>
         </ul>
       </nav>
     </header>
