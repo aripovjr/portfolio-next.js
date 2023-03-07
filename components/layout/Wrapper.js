@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const Wrapper = styled.section`
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 2rem;
   background-color: #f4f5fa;
   display: flex;
