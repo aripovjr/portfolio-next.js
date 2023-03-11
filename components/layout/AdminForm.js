@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import classes from "./Admin.module.css";
+import Wrapper from "./../layout/Wrapper";
+import WrapperContainer from "./../layout/Wrapper";
 
 function AdminForm() {
+  const nameRef = useRef();
+  const surnameRef = useRef();
+  const titleRef = useRef();
+  const articleRef = useRef();
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    const blogData = {
+      name: nameRef.current.value,
+      surname: surnameRef.current.value,
+      title: titleRef.current.value,
+      article: articleRef.current.value,
+    };
+  };
+
   return (
-    <form className={classes.form} id="blogForm">
-      <div className={classes.leftSide}>
+    <form className={classes.form} id="blogForm" onSubmit={submitForm}>
+      <WrapperContainer>
         <div className={classes.formControl}>
           <label htmlFor="name">Name</label>
-          <input name="name" id="name" type="text" />
+          <input ref={nameRef} required name="name" id="name" type="text" />
         </div>
         <div className={classes.formControl}>
           <label htmlFor="surname">Surname</label>
-          <input name="surname" id="surname" type="text" />
+          <input
+            ref={surnameRef}
+            required
+            name="surname"
+            id="surname"
+            type="text"
+          />
         </div>
         <div className={classes.formControl}>
-          <label htmlFor="email">E-mail</label>
-          <input name="email" id="email" type="email" />
+          <label htmlFor="title">Title</label>
+          <input ref={titleRef} required name="title" id="title" type="text" />
         </div>
         <div className={classes.formControl}>
           <label className={classes.imgLabel} htmlFor="img">
@@ -29,12 +52,23 @@ function AdminForm() {
             placeholder="Upload Image"
           />
         </div>
-      </div>
-      <div className={classes.rightSide}>
-        <textarea rows="20" cols="70" name="blog" form="blogForm">
-          Write your blogs
-        </textarea>
-      </div>
+        <div className={classes.formControl}>
+          <button className={classes.actionButton} type="submit">
+            Post
+          </button>
+        </div>
+      </WrapperContainer>
+      <WrapperContainer>
+        <textarea
+          ref={articleRef}
+          className={classes.textarea}
+          rows="18.5"
+          cols="55"
+          name="blog"
+          form="blogForm"
+          placeholder="Write your blog article"
+        />
+      </WrapperContainer>
     </form>
   );
 }
