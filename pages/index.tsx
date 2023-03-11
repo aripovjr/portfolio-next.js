@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { Fragment } from "react";
 import Intro from "./../components/layout/Intro";
+import Media from "./../components/layout/Media";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
         />
       </Head>
       <Intro />
+      <Media />
     </Fragment>
   );
 }
