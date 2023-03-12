@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import classes from "./Admin.module.css";
-import WrapperContainer from "./../layout/Wrapper";
+import Wrapper from "./../layout/Wrapper";
 
 function AdminForm() {
   const nameRef = useRef();
@@ -16,11 +16,12 @@ function AdminForm() {
       title: titleRef.current.value,
       article: articleRef.current.value,
     };
+    console.log(blogData);
   };
 
   return (
     <form className={classes.form} id="blogForm" onSubmit={submitForm}>
-      <WrapperContainer>
+      <Wrapper>
         <div className={classes.formControl}>
           <label htmlFor="name">Name</label>
           <input ref={nameRef} required name="name" id="name" type="text" />
@@ -56,8 +57,8 @@ function AdminForm() {
             Post
           </button>
         </div>
-      </WrapperContainer>
-      <WrapperContainer>
+      </Wrapper>
+      <Wrapper>
         <textarea
           ref={articleRef}
           className={classes.textarea}
@@ -67,7 +68,7 @@ function AdminForm() {
           form="blogForm"
           placeholder="Write your blog article"
         />
-      </WrapperContainer>
+      </Wrapper>
     </form>
   );
 }

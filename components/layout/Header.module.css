@@ -10,7 +10,7 @@
 }
 
 .logo {
-  color: #515ffd;
+  color: #4d8cff;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
@@ -31,7 +31,7 @@
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #515ffd;
+  color: #4d8cff;
 }
 
 .header a:hover,
